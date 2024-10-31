@@ -1,3 +1,4 @@
+import User from './User.js';
 class UsersRepository {
   constructor() {
     this.users = [];
@@ -7,3 +8,5 @@ class UsersRepository {
     return this.users;
   }
 }
+
+export default UsersRepository;

@@ -1,8 +1,9 @@
 import { Router } from "express";
+import UsersRepository from "./models/users/UsersRepository.js";  
 
 const usuariosRoutes = Router();
-
-let usuarios = [];
+const usersList = new UsersRepository();
+const usuarios = usersList.getAllUsers();
 
 usuariosRoutes.get("/", (req, res) => {
   return res.status(200).json({
